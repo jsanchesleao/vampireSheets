@@ -23,6 +23,11 @@
     color: #333;
     text-align: center;
 }
+
+#characterSheet hr.with-text{
+    margin-bottom: -10px;
+}
+
 #characterSheet hr:after {
     display: inline-block;
     position: relative; 
