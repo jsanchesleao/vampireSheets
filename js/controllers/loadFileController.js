@@ -20,6 +20,8 @@ app.controller('LoadFileController', ['$scope', '$rootScope', '$location', funct
 	    	coragem: 1
 	    },
 	    disciplinas: [],
+	    antecedentes: [],
+	    outrasCaracteristicas: [],
 	    caminho: {
 	    	info:{
 	    		conscienciaConviccao: 'Consciencia/Conviccao',
@@ -27,7 +29,8 @@ app.controller('LoadFileController', ['$scope', '$rootScope', '$location', funct
 		    	nome: ""
 	    	},
 	    	level: 0
-	    }
+	    },
+	    geracao: 12
     };
 
     $scope.loadFile = function(){

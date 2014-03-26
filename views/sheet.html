@@ -38,7 +38,21 @@
             <section>
                 <div>
                     <label for="geracao">Geracao:</label>
-                    <input hide-box when-empty="________________" type="number" id="geracao" ng-model="sheet.geracao">
+                    <select hide-box when-empty="________________" id="geracao" ng-model="sheet.geracao">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                    </select>
                 </div>
                 <div>
                     <label for="refugio">Refugio:</label>
@@ -283,8 +297,9 @@
             <div class="col" id="col1">
                 <section id="outrasCaracteristicas">
                     <h2>Outras Caracteristicas</h2>
+                    <button ng-click="addTrait()" class="icon icon-plus"></button>
                     <div ng-repeat="trait in sheet.outrasCaracteristicas track by $index">
-                        {{trait}}
+                        <input hide-box when-empty="________________" type="text" id="nome" ng-model="sheet.outrasCaracteristicas[$index]" ng-blur="removeTrait($index)">
                     </div>
                 </section>
             </div>
@@ -338,5 +353,3 @@
 </section>
 
 <button ng-click="downloadSheet()">Download</button>
-
-{{sheet}}

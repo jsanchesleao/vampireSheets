@@ -42,4 +42,14 @@ app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disc
     	}
     }
 
+    $scope.addTrait = function(){
+        $scope.sheet.outrasCaracteristicas.push('');
+    };
+
+    $scope.removeTrait = function(index){
+        if( $scope.sheet.outrasCaracteristicas[index] == '' ){
+            $scope.sheet.outrasCaracteristicas.splice(index, 1);
+        }
+    }
+
 }]);

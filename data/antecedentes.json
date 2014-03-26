@@ -1,11 +1,29 @@
 [
 	{
+		"nome": "Aliados"
+	},
+	{
+		"nome": "Contatos"
+	},
+	{
+		"nome": "Geração"
+	},
+	{
+		"nome": "Influência"
+	},
+	{
 		"nome": "Lacaios"
 	},
 	{
-		"nome": "Status"
+		"nome": "Mentor"
 	},
 	{
 		"nome": "Rebanho"
+	},
+	{
+		"nome": "Recursos"
+	},
+	{
+		"nome": "Status"
 	}
 ]

@@ -1,16 +1,42 @@
 [
+	
+	{
+		"nome": "da Besta",
+		"conscienciaConviccao": "Convicção",
+		"autocontroleInstinto": "Instinto"
+	},
+	{
+		"nome": "do Sangue",
+		"conscienciaConviccao": "Convicção",
+		"autocontroleInstinto": "Auto Controle"
+	},
+	{
+		"nome": "do Cavaleiro",
+		"conscienciaConviccao": "Consciência",
+		"autocontroleInstinto": "Auto Controle"
+	},
+	{
+		"nome": "do Diabo",
+		"conscienciaConviccao": "Convicção",
+		"autocontroleInstinto": "Instinto"
+	},
 	{
 		"nome": "do Paraiso",
 		"conscienciaConviccao": "Consciência",
 		"autocontroleInstinto": "Auto Controle"
 	},
 	{
-		"nome": "da Besta",
+		"nome": "da Humanidade",
+		"conscienciaConviccao": "Consciência",
+		"autocontroleInstinto": "Auto Controle"
+	},
+	{
+		"nome": "do Paradoxo",
 		"conscienciaConviccao": "Convicção",
 		"autocontroleInstinto": "Auto Controle"
 	},
 	{
-		"nome": "do Diabo",
+		"nome": "do Tífon",
 		"conscienciaConviccao": "Convicção",
 		"autocontroleInstinto": "Instinto"
 	}

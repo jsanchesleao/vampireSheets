@@ -1,11 +1,20 @@
 [
-	{
-		"nome": "Tirano"
-	},
-	{
-		"nome": "Criança"
-	},
-	{
-		"nome": "Penitente"
-	}
+	{"nome":"Autocrata"},
+	{"nome":"Bárbaro"},
+	{"nome":"Celebrante"},
+	{"nome":"Comediante"},
+	{"nome":"Criança"},
+	{"nome":"Defensor"},
+	{"nome":"Fanático"},
+	{"nome":"Galante"},
+	{"nome":"Inovador"},
+	{"nome":"Juiz"},
+	{"nome":"Malandro"},
+	{"nome":"Monstro"},
+	{"nome":"Penitente"},
+	{"nome":"Rebelde"},
+	{"nome":"Samaritano"},
+	{"nome":"Sobrevivente"},
+	{"nome":"Solitário"},
+	{"nome":"Tirano"}
 ]

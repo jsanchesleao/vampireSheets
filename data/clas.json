@@ -1,11 +1,47 @@
 [
 	{
-		"nome": "Tzimisce"
-	},
-	{
 		"nome": "Assamitas"
 	},
 	{
+		"nome": "Brujah"
+	},
+	{
+		"nome": "Capadócios"
+	},
+	{
+		"nome": "Gangrel"
+	},
+	{
+		"nome": "Lasombra"
+	},
+	{
 		"nome": "Malkavianos"
+	},
+	{
+		"nome": "Nosferatu"
+	},
+	{
+		"nome": "Ravnos"
+	},
+	{
+		"nome": "Setita"
+	},
+	{
+		"nome": "Toreador"
+	},
+	{
+		"nome": "Tremere"
+	},
+	{
+		"nome": "Tzmisce"
+	},
+	{
+		"nome": "Ventrue"
+	},
+	{
+		"nome": "Caitiff"
+	},
+	{
+		"nome": "Baali"
 	}
 ]

@@ -1,11 +1,68 @@
 [
 	{
-		"nome": "Vicissitude"
+		"nome": "Animalismo"
+	},
+	{
+		"nome": "Auspícios"
+	},
+	{
+		"nome": "Demência"
+	},
+	{
+		"nome": "Dominação"
 	},
 	{
 		"nome": "Fortitude"
 	},
 	{
+		"nome": "Metamorfose"
+	},
+	{
+		"nome": "Mortis"
+	},
+	{
+		"nome": "Ofuscação"
+	},
+	{
 		"nome": "Potência"
+	},
+	{
+		"nome": "Presença"
+	},
+	{
+		"nome": "Quietus"
+	},
+	{
+		"nome": "Quimeirismo"
+	},
+	{
+		"nome": "Rapidez"
+	},
+	{
+		"nome": "Tenebrosidade"
+	},
+	{
+		"nome": "Vicissitude"
+	},
+	{
+		"nome": "Daimoinon"
+	},
+	{
+		"nome": "Rego Vitae"
+	},
+	{
+		"nome": "Rego Motus"
+	},
+	{
+		"nome": "Creo Ignem"
+	},
+	{
+		"nome": "Rego Tempestas"
+	},
+	{
+		"nome": "Rego Aquam"
+	},
+	{
+		"nome": "Rego Elementum"
 	}
 ]
