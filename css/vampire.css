@@ -72,6 +72,6 @@
     width: 30px;
 }
 
-#caminho, #forcaDeVontade, #sangue, #experiencia{
+#caminho, #caminho .text-input, #forcaDeVontade, #sangue, #experiencia{
     text-align: center;
 }
