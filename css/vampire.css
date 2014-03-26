@@ -37,6 +37,10 @@
     background: white;
 }
 
+#characterSheet select{
+    width: 125px;
+}
+
 #divisor-atributos:after{
     content: "Atributos";
 }
@@ -105,4 +109,8 @@
 
 .icon-cross{
     background: url(../img/icon-cross.png);
+}
+
+.icon-plus{
+    background: url(../img/icon-plus.png);
 }

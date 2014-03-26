@@ -1,36 +1,39 @@
-app.controller('SheetController', ['$scope', 'Caminho', function($scope, Caminho){
+app.controller('SheetController', ['$scope', 'Caminho', 'Disciplina', 'Antecedente',function($scope, Caminho, Disciplina, Antecedente){
 
     $scope.sheet = $scope.sheet || {
-    	attrs: {
-	    	forca : 1,
-	    	destreza: 1, 
-	    	vigor: 1,
-	    	carisma: 1,
-	    	manipulacao: 1,
-	    	aparencia: 1,
-	    	percepcao: 1,
-	    	inteligencia: 1,
-	    	raciocinio: 1
-	    },
-	    virt: {
-	    	conscienciaConviccao: 1,
-	    	autoControleInstinto: 1,
-	    	coragem: 1
-	    },
-	    disciplinas: [],
-	    caminho: {
-	    	info:{
-	    		conscienciaConviccao: 'Consciencia/Conviccao',
-		    	autocontroleInstinto: 'Auto Controle/Instinto',
-		    	nome: ""
-	    	},
-	    	level: 0
-	    }
-    };
+        attrs: {
+            forca : 1,
+            destreza: 1, 
+            vigor: 1,
+            carisma: 1,
+            manipulacao: 1,
+            aparencia: 1,
+            percepcao: 1,
+            inteligencia: 1,
+            raciocinio: 1
+        },
+        virt: {
+            conscienciaConviccao: 1,
+            autoControleInstinto: 1,
+            coragem: 1
+        },
+        disciplinas: [],
+        antecedentes: [],
+        caminho: {
+            info:{
+                conscienciaConviccao: 'Consciencia/Conviccao',
+                autocontroleInstinto: 'Auto Controle/Instinto',
+                nome: ""
+            },
+            level: 0
+        }
+    }
 
     $scope.nomeCaminho = $scope.sheet.caminho.info.nome;
 
     $scope.caminhos = Caminho.get();
+    $scope.disciplinas = Disciplina.get();
+    $scope.antecedentes = Antecedente.get();
 
     $scope.selecionarCaminho = function(){
     	for(var i = 0; i < $scope.caminhos.length; i++){
@@ -49,13 +52,20 @@ app.controller('SheetController', ['$scope', 'Caminho', function($scope, Caminho
     $scope.addDisciplina = function(){
     	$scope.sheet.disciplinas.push({
     		nome: '',
-    		valor: 0
+    		level: 0
     	});
     };
 
-    $scope.removerDisciplina = function(index){
-    	if( $scope.sheet.disciplinas[index].nome == '' ){
-    		$scope.sheet.disciplinas.splice(index, 1);
+    $scope.addAntecedente = function(){
+        $scope.sheet.antecedentes.push({
+            nome: '',
+            level: 0
+        });
+    };
+
+    $scope.removerAntecedente = function(index){
+    	if( $scope.sheet.antecedentes[index].nome == '' ){
+    		$scope.sheet.antecedentes.splice(index, 1);
     	}
     }
 

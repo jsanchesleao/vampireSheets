@@ -234,17 +234,24 @@
         <section id="vantagens">
             <section id="disciplinas">
                 <h2>Disciplinas</h2>
-                <button ng-click="addDisciplina()">+</button>
+                <button ng-click="addDisciplina()" class="icon icon-plus"></button>
                 <div ng-repeat="disciplina in sheet.disciplinas track by $index">
-                    <input hide-box when-empty="________________" ng-blur="removerDisciplina($index)" type="text" id="disciplina-nome-{{$index}}" ng-model="disciplina.nome">
+                    <select hide-box when-empty="________________" ng-blur="removerDisciplina($index)" ng-model="disciplina.nome">
+                        <option value=""> [Remover] </option>
+                        <option ng-repeat="disciplina in disciplinas" value="{{disciplina.nome}}">{{disciplina.nome}}</option>
+                    </select>
                     <input bulleted type="number" id="disciplina-level-{{$index}}" ng-model="disciplina.level">
                 </div>
             </section>
             <section id="antecedentes">
                 <h2>Antecedentes</h2>
+                <button ng-click="addAntecedente()" class="icon icon-plus"></button>
                 <div ng-repeat="antecedente in sheet.antecedentes track by $index">
-                    <label for="antecedente-{{$index}}">{{antecedente.nome}}:</label>
-                    <input bulleted type="number" id="antecedente-{{$index}}" ng-model="antecedente.level">
+                    <select hide-box when-empty="________________" ng-blur="removerAntecedente($index)" ng-model="antecedente.nome">
+                        <option value=""> [Remover] </option>
+                        <option ng-repeat="antecedente in antecedentes" value="{{antecedente.nome}}">{{antecedente.nome}}</option>
+                    </select>
+                    <input bulleted type="number" id="antecedente-level-{{$index}}" ng-model="antecedente.level">
                 </div>
             </section>
             <section id="virtudes">
@@ -326,4 +333,4 @@
 
 <button ng-click="downloadSheet()">Download</button>
 
-{{sheet.caminho}}
+{{sheet}}
