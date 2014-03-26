@@ -1,3 +1,3 @@
 var _constants = {
-	basePath: '/vampireSheets/'
+	basePath: '/vampireSheets'
 }
