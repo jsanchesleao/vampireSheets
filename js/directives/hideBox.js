@@ -29,7 +29,7 @@ app.directive('hideBox', function(){
             elem.css("display", "none");
 
             elem.bind("blur", function(){
-                text.html( convertToText(elem.val() ) );
+                text.html( convertToText( scope.model ) );
                 text.css("display", "inline-block");
                 elem.css("display", "none");
             });

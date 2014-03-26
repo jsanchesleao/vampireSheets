@@ -18,15 +18,21 @@
             <section>
                 <div>
                     <label for="natureza">Natureza:</label>
-                    <input hide-box when-empty="________________" type="text" id="natureza" ng-model="sheet.natureza">
+                    <select hide-box when-empty="________________" id="natureza" ng-model="sheet.natureza">
+                        <option ng-repeat="natureza in arquetipos" value="{{natureza.nome}}">{{natureza.nome}}</option>
+                    </select>
                 </div>
                 <div>
                     <label for="comportamento">Comportamento:</label>
-                    <input hide-box when-empty="________________" type="text" id="comportamento" ng-model="sheet.comportamento">
+                    <select hide-box when-empty="________________" id="comportamento" ng-model="sheet.comportamento">
+                        <option ng-repeat="comportamento in arquetipos" value="{{comportamento.nome}}">{{comportamento.nome}}</option>
+                    </select>
                 </div>
                 <div>
                     <label for="cla">Cla:</label>
-                    <input hide-box when-empty="________________" type="text" id="cla" ng-model="sheet.cla">
+                    <select hide-box when-empty="________________" id="cla" ng-model="sheet.cla">
+                        <option ng-repeat="cla in clas" value="{{cla.nome}}">{{cla.nome}}</option>
+                    </select>
                 </div>
             </section>
             <section>

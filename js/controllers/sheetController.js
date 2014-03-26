@@ -1,4 +1,4 @@
-app.controller('SheetController', ['$scope', 'Caminho', 'Disciplina', 'Antecedente',function($scope, Caminho, Disciplina, Antecedente){
+app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disciplina', 'Antecedente',function($scope, Cla, Arquetipo, Caminho, Disciplina, Antecedente){
 
     $scope.sheet = $scope.sheet || {
         attrs: {
@@ -31,6 +31,8 @@ app.controller('SheetController', ['$scope', 'Caminho', 'Disciplina', 'Anteceden
 
     $scope.nomeCaminho = $scope.sheet.caminho.info.nome;
 
+    $scope.clas = Cla.get();
+    $scope.arquetipos = Arquetipo.get();
     $scope.caminhos = Caminho.get();
     $scope.disciplinas = Disciplina.get();
     $scope.antecedentes = Antecedente.get();
