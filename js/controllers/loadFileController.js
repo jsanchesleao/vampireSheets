@@ -31,7 +31,9 @@ app.controller('LoadFileController', ['$scope', '$rootScope', '$location', funct
     };
 
     $scope.loadFile = function(){
-        $rootScope.sheet = $scope.file;
+    	if( $scope.file != 'unloaded'){
+    		$rootScope.sheet = $scope.file;
+    	}
         $location.path('/sheet');
     }
 
