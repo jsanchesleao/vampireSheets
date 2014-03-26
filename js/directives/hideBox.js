@@ -21,21 +21,23 @@ app.directive('hideBox', function(){
 
             elem.wrap('<span class="text-input"></span>');
 
-            var text = angular.element('<span></span>');
+            var text = angular.element('<span class="text-input-placeholder"></span>');
             text.html( convertToText(scope.model) );
             elem.parent().append(text);
 
-            text.css("display", "block");
+            text.css("display", "inline-block");
             elem.css("display", "none");
 
             elem.bind("blur", function(){
                 text.html( convertToText(elem.val() ) );
-                text.css("display", "block");
+                text.css("display", "inline-block");
                 elem.css("display", "none");
             });
 
             text.bind("click", function(){
-                elem.val( convertFromText(text.html()) );
+                scope.$apply(function(){
+                    scope.model = convertFromText(text.html());
+                });
                 text.css("display", "none");
                 elem.css("display", "inline-block");
                 elem[0].focus();

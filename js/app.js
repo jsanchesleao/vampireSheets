@@ -1,14 +1,14 @@
-var app = angular.module('vampire', ['ngRoute']);
+var app = angular.module('vampire', ['ngRoute', 'ngResource']);
 
 app.config(['$routeProvider', function($routeProvider){
 
     $routeProvider.when('/', {
-        templateUrl: '/views/load.html',
-        controller: 'LoadFileController'
+        templateUrl: _constants.basePath + '/views/load.html',
+        controller: _constants.basePath + 'LoadFileController'
     }).
     when('/sheet', {
-        templateUrl: '/views/sheet.html',
-        controller: 'SheetController'
+        templateUrl: _constants.basePath + '/views/sheet.html',
+        controller: _constants.basePath + 'SheetController'
     }).
     otherwise({
         redirectTo: '/'

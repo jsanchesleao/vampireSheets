@@ -63,7 +63,7 @@
     display: table-row;
 }
 
-.attr-group label, #virtudes label, #disciplinas label, #antecedentes label{
+.attr-group label, #virtudes label, #disciplinas label, #antecedentes label, .text-input-placeholder{
     display: table-cell;
     min-width: 125px;
 }
@@ -74,4 +74,35 @@
 
 #caminho, #caminho .text-input, #forcaDeVontade, #sangue, #experiencia{
     text-align: center;
+}
+
+.icon{
+    width: 18px;
+    height: 18px;
+    border: 0;
+    border-top: 2px;
+}
+
+.icon-filled{
+    background: url(../img/icon-filled.png);
+}
+
+.icon-empty{
+    background: url(../img/icon-empty.png);
+}
+
+.icon-square-filled{
+    background: url(../img/icon-square-filled.png);
+}
+
+.icon-square-empty{
+    background: url(../img/icon-square-empty.png);
+}
+
+.icon-check{
+    background: url(../img/icon-check.png);
+}
+
+.icon-cross{
+    background: url(../img/icon-cross.png);
 }

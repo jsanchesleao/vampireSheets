@@ -7,6 +7,8 @@ app.directive('jsonFile', function(){
         link: function(scope, elem, attrs){
             scope.data = 'unloaded';
 
+
+
             elem.bind("change", function(evt){
                 var file = evt.target.files[0];
                 if( file ){

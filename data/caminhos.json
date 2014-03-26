@@ -1,0 +1,17 @@
+[
+	{
+		"nome": "do Paraiso",
+		"conscienciaConviccao": "Consciência",
+		"autocontroleInstinto": "Auto Controle"
+	},
+	{
+		"nome": "da Besta",
+		"conscienciaConviccao": "Convicção",
+		"autocontroleInstinto": "Auto Controle"
+	},
+	{
+		"nome": "do Diabo",
+		"conscienciaConviccao": "Convicção",
+		"autocontroleInstinto": "Instinto"
+	}
+]
