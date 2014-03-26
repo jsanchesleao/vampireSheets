@@ -1,0 +1,316 @@
+<section id="characterSheet">
+    <form>
+        <section id="meta" class="attr-group">
+            <section>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" ng-model="sheet.nome">
+                </div>
+                <div>
+                    <label for="jogador">Jogador:</label>
+                    <input type="text" id="jogador" ng-model="sheet.jogador">
+                </div>
+                <div>
+                    <label for="cronicas">Cronicas:</label>
+                    <input type="text" id="cronicas" ng-model="sheet.cronicas">
+                </div>
+            </section>
+            <section>
+                <div>
+                    <label for="natureza">Natureza:</label>
+                    <input type="text" id="natureza" ng-model="sheet.natureza">
+                </div>
+                <div>
+                    <label for="comportamento">Comportamento:</label>
+                    <input type="text" id="comportamento" ng-model="sheet.comportamento">
+                </div>
+                <div>
+                    <label for="cla">Cla:</label>
+                    <input type="text" id="cla" ng-model="sheet.cla">
+                </div>
+            </section>
+            <section>
+                <div>
+                    <label for="geracao">Geracao:</label>
+                    <input type="number" id="geracao" ng-model="sheet.geracao">
+                </div>
+                <div>
+                    <label for="refugio">Refugio:</label>
+                    <input type="text" id="refugio" ng-model="sheet.refugio">
+                </div>
+                <div>
+                    <label for="conceito">Conceito:</label>
+                    <input type="text" id="conceito" ng-model="sheet.conceito">
+                </div>
+            </section>
+        </section>
+        <hr id="divisor-atributos">
+        <section id="atributos" class="attr-group">
+            <section>
+                <h2>Fisicos</h2>
+                <div>
+                    <label for="forca">Forca:</label>
+                    <input type="number" id="forca" ng-model="sheet.attrs.forca">
+                </div>
+                <div>
+                    <label for="destreza">Destreza:</label>
+                    <input type="number" id="destreza" ng-model="sheet.attrs.destreza">
+                </div>
+                <div>
+                    <label for="vigor">Vigor:</label>
+                    <input type="number" id="vigor" ng-model="sheet.attrs.vigor">
+                </div>
+            </section>
+            <section>
+                <h2>Sociais</h2>
+                <div>
+                    <label for="carisma">Carisma:</label>
+                    <input type="number" id="carisma" ng-model="sheet.attrs.carisma">
+                </div>
+                <div>
+                    <label for="manipulacao">Manipulacao:</label>
+                    <input type="number" id="manipulacao" ng-model="sheet.attrs.manipulacao">
+                </div>
+                <div>
+                    <label for="aparencia">Aparencia:</label>
+                    <input type="number" id="aparencia" ng-model="sheet.attrs.aparencia">
+                </div>
+            </section>
+            <section>
+                <h2>Mentais</h2>
+                <div>
+                    <label for="percepcao">Percepcao:</label>
+                    <input type="number" id="percepcao" ng-model="sheet.attrs.percepcao">
+                </div>
+                <div>
+                    <label for="inteligencia">Inteligencia:</label>
+                    <input type="number" id="inteligencia" ng-model="sheet.attrs.inteligencia">
+                </div>
+                <div>
+                    <label for="raciocinio">Raciocinio:</label>
+                    <input type="number" id="raciocinio" ng-model="sheet.attrs.raciocinio">
+                </div>
+            </section>
+        </section>
+            
+        <hr id="divisor-habilidades">
+        <section id="habilidades" class="attr-group">
+            <section>
+                <h2>Talentos</h2>
+                <div>
+                    <label for="representacao">Representacao:</label>
+                    <input type="number" id="representacao" ng-model="sheet.skills.representacao">
+                </div>
+                <div>
+                    <label for="prontidao">Prontidao:</label>
+                    <input type="number" id="prontidao" ng-model="sheet.skills.prontidao">
+                </div>
+                <div>
+                    <label for="esportes">Esportes:</label>
+                    <input type="number" id="esportes" ng-model="sheet.skills.esportes">
+                </div>
+                <div>
+                    <label for="briga">Briga:</label>
+                    <input type="number" id="briga" ng-model="sheet.skills.briga">
+                </div>
+                <div>
+                    <label for="esquiva">Esquiva:</label>
+                    <input type="number" id="esquiva" ng-model="sheet.skills.esquiva">
+                </div>
+                <div>
+                    <label for="empatia">Empatia:</label>
+                    <input type="number" id="empatia" ng-model="sheet.skills.empatia">
+                </div>
+                <div>
+                    <label for="intimidacao">Intimidacao:</label>
+                    <input type="number" id="intimidacao" ng-model="sheet.skills.intimidacao">
+                </div>
+                <div>
+                    <label for="crime">Crime:</label>
+                    <input type="number" id="crime" ng-model="sheet.skills.crime">
+                </div>
+                <div>
+                    <label for="lideranca">Lideranca:</label>
+                    <input type="number" id="lideranca" ng-model="sheet.skills.lideranca">
+                </div>
+                <div>
+                    <label for="labia">Labia:</label>
+                    <input type="number" id="labia" ng-model="sheet.skills.labia">
+                </div>
+            </section>
+        
+        
+            <section>
+                <h2>Pericias</h2>
+                <div>
+                    <label for="empatiaAnimais">Empatia C/ Animais:</label>
+                    <input type="number" id="empatiaAnimais" ng-model="sheet.skills.empatiaAnimais">
+                </div>
+                <div>
+                    <label for="arqueirismo">Arqueirismo:</label>
+                    <input type="number" id="arqueirismo" ng-model="sheet.skills.arqueirismo">
+                </div>
+                <div>
+                    <label for="artesanato">Artesanato:</label>
+                    <input type="number" id="artesanato" ng-model="sheet.skills.artesanato">
+                </div>
+                <div>
+                    <label for="etiqueta">Etiqueta:</label>
+                    <input type="number" id="etiqueta" ng-model="sheet.skills.etiqueta">
+                </div>
+                <div>
+                    <label for="herborismo">Herborismo:</label>
+                    <input type="number" id="herborismo" ng-model="sheet.skills.herborismo">
+                </div>
+                <div>
+                    <label for="armasBrancas">Armas Brancas:</label>
+                    <input type="number" id="armasBrancas" ng-model="sheet.skills.armasBrancas">
+                </div>
+                <div>
+                    <label for="musica">Musica:</label>
+                    <input type="number" id="musica" ng-model="sheet.skills.musica">
+                </div>
+                <div>
+                    <label for="cavalgar">Cavalgar:</label>
+                    <input type="number" id="cavalgar" ng-model="sheet.skills.cavalgar">
+                </div>
+                <div>
+                    <label for="furtividade">Furtividade:</label>
+                    <input type="number" id="furtividade" ng-model="sheet.skills.furtividade">
+                </div>
+                <div>
+                    <label for="sobrevivencia">Sobrevivencia:</label>
+                    <input type="number" id="sobrevivencia" ng-model="sheet.skills.sobrevivencia">
+                </div>
+            </section>
+
+            <section>
+                <h2>Conhecimentos</h2>
+                <div>
+                    <label for="instrucao">Instrucao:</label>
+                    <input type="number" id="instrucao" ng-model="sheet.skills.instrucao">
+                </div>
+                <div>
+                    <label for="sabedoriaPopular">Sabedoria Popular:</label>
+                    <input type="number" id="sabedoriaPopular" ng-model="sheet.skills.sabedoriaPopular">
+                </div>
+                <div>
+                    <label for="investigacao">Investigacao:</label>
+                    <input type="number" id="investigacao" ng-model="sheet.skills.investigacao">
+                </div>
+                <div>
+                    <label for="direito">Direito:</label>
+                    <input type="number" id="direito" ng-model="sheet.skills.direito">
+                </div>
+                <div>
+                    <label for="linguistica">Linguistica:</label>
+                    <input type="number" id="linguistica" ng-model="sheet.skills.linguistica">
+                </div>
+                <div>
+                    <label for="medicina">Medicina:</label>
+                    <input type="number" id="medicina" ng-model="sheet.skills.medicina">
+                </div>
+                <div>
+                    <label for="ocultismo">Ocultismo:</label>
+                    <input type="number" id="ocultismo" ng-model="sheet.skills.ocultismo">
+                </div>
+                <div>
+                    <label for="politica">Politica:</label>
+                    <input type="number" id="politica" ng-model="sheet.skills.politica">
+                </div>
+                <div>
+                    <label for="ciencia">Ciencia:</label>
+                    <input type="number" id="ciencia" ng-model="sheet.skills.ciencia">
+                </div>
+                <div>
+                    <label for="senescalia">Senescalia:</label>
+                    <input type="number" id="senescalia" ng-model="sheet.skills.senescalia">
+                </div>
+            </section>
+            
+        </section>
+
+        <hr id="divisor-vantagens">
+        <section id="vantagens">
+            <section id="disciplinas">
+                <h2>Disciplinas</h2>
+                <div ng-repeat="disciplina in sheet.disciplinas track by $index">
+                    <label for="disciplina-{{$index}}">{{disciplina.nome}}:</label>
+                    <input type="number" id="disciplina-{{$index}}" ng-model="disciplina.level">
+                </div>
+            </section>
+            <section id="antecedentes">
+                <h2>Antecedentes</h2>
+                <div ng-repeat="antecedente in sheet.antecedentes track by $index">
+                    <label for="antecedente-{{$index}}">{{antecedente.nome}}:</label>
+                    <input type="number" id="antecedente-{{$index}}" ng-model="antecedente.level">
+                </div>
+            </section>
+            <section id="virtudes">
+                <h2>Virtudes</h2>
+                <div>
+                    <label for="conscienciaConviccao">Consciencia/Conviccao:</label>
+                    <input type="number" id="conscienciaConviccao" ng-model="sheet.virt.conscienciaConviccao">
+                </div>
+                <div>
+                    <label for="autoControleInstinto">Auto Controle/Instinto:</label>
+                    <input type="number" id="autoControleInstinto" ng-model="sheet.virt.autoControleInstinto">
+                </div>
+                <div>
+                    <label for="coragem">Coragem:</label>
+                    <input type="number" id="coragem" ng-model="sheet.virt.coragem">
+                </div>
+            </section>
+        </section>
+
+        <hr>
+
+        <section id="footer">
+            <div class="col" id="col1">
+                <section id="outrasCaracteristicas">
+                    <h2>Outras Caracteristicas</h2>
+                    <div ng-repeat="trait in sheet.outrasCaracteristicas track by $index">
+                        {{trait}}
+                    </div>
+                </section>
+            </div>
+            <div class="col" id="col2">
+                <section id="caminho">
+                    <h2>Caminho</h2>
+                    <input type="text" ng-model="sheet.caminho.nome" >
+                    <input type="number" ng-model="sheet.caminho.level" >
+                </section>
+                <section id="forcaDeVontade">
+                    <h2>Forca de Vontade</h2>
+                    <input type="number" ng-model="sheet.forcaDeVontade.max" >
+                    <input type="number" ng-model="sheet.forcaDeVontade.atual" >
+                </section>
+                <section id="sangue">
+                    <h2>Pontos de Sangue</h2>
+                    <input type="number" ng-model="sheet.pontosDeSangue" >
+                </section>
+            </div>
+            <div class="col" id="col3">
+                <section id="vitalidade">
+                    <h2>Vitalidade</h2>
+                    <ul>
+                        <li>Escoriado</li>
+                        <li>Machucado</li>
+                        <li>Ferido</li>
+                        <li>Ferido Gravemente</li>
+                        <li>Espancado</li>
+                        <li>Aleijado</li>
+                        <li>Incapacitado</li>
+                    </ul>
+                </section>
+                <section id="experiencia">
+                    <h2>Experiencia</h2>
+                    <input type="number" ng-model="sheet.exp">
+                </section>
+            </div>
+        </section>
+                
+    </form>
+</section>
+
+<button ng-click="downloadSheet()">Download</button>

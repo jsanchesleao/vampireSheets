@@ -1,0 +1,26 @@
+{
+    "nome": "Jeff",
+    "disciplinas": [
+        {
+            "nome": "vicissitude",
+            "level": 3
+        },
+        {
+            "nome": "auspicios",
+            "level": 1
+        }
+    ],
+    "antecedentes": [
+        {
+            "nome": "recursos",
+            "level": 2
+        },
+        {
+            "nome": "lacaio",
+            "level": 3
+        }
+    ],
+    "outrasCaracteristicas":[
+        "Perturbação: -2"
+    ]
+}

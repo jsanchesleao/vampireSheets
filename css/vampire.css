@@ -1,0 +1,72 @@
+#characterSheet{
+    width: 900px;
+    margin: auto;
+    border: 3px double black;
+}
+
+#characterSheet h1{
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+#characterSheet h2{
+    font-size: 16px;
+    margin: auto;
+    text-align: center;
+}
+
+#characterSheet hr{
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+#characterSheet hr:after {
+    display: inline-block;
+    position: relative; 
+    top: -0.5em;  
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+#divisor-atributos:after{
+    content: "Atributos";
+}
+
+#divisor-habilidades:after{
+    content: "Habilidades";
+}
+
+#divisor-vantagens:after{
+    content: "Vantagens";
+}
+
+.attr-group, #vantagens, #footer{
+    overflow: hidden;
+    margin-left: 5%;
+}
+
+.attr-group section, #vantagens section, #footer .col{
+    float: left;
+    width: 33%;
+}
+
+.attr-group div, #virtudes div, #disciplinas div, #antecedentes div{
+    display: table-row;
+}
+
+.attr-group label, #virtudes label, #disciplinas label, #antecedentes label{
+    display: table-cell;
+    min-width: 125px;
+}
+
+#virtudes input{
+    width: 30px;
+}
+
+#caminho, #forcaDeVontade, #sangue, #experiencia{
+    text-align: center;
+}
