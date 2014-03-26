@@ -29,6 +29,12 @@ app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disc
     	});
     };
 
+    $scope.removerDisciplina = function(index){
+        if( $scope.sheet.disciplinas[index].nome == '' ){
+            $scope.sheet.disciplinas.splice(index, 1);
+        }
+    }
+
     $scope.addAntecedente = function(){
         $scope.sheet.antecedentes.push({
             nome: '',

@@ -41,6 +41,11 @@
     width: 125px;
 }
 
+#characterSheet .text-input{
+    font-family: arial;
+    font-style: italic;
+}
+
 #divisor-atributos:after{
     content: "Atributos";
 }
