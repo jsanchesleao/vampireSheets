@@ -2,22 +2,31 @@ app.directive('jsonFile', function(){
     return {
         restrict: 'A',
         scope: {
-            data: '=jsonFile'
+            data: '=jsonFile',
+            callback: '=whenLoad'
         },
         link: function(scope, elem, attrs){
-            scope.data = 'unloaded';
-
             elem.bind("change", function(evt){
-                var file = evt.target.files[0];
-                if( file ){
-                    var reader = new FileReader();
-                    reader.onload = function(e){
-                        scope.$apply(function(){
-                            scope.data = JSON.parse(e.target.result);
-                        })
+                var files = evt.target.files;
+
+                for(var i = 0; i < files.length; i++){
+                    if( files[i] ){
+                        var reader = new FileReader();
+                        reader.onload = function(e){
+                            scope.$apply(function(){
+                                var data = JSON.parse(e.target.result);
+                                if( scope.data ){
+                                    scope.data = data;
+                                }
+                                if( scope.callback ){
+                                    scope.callback(data);
+                                }
+                            });
+                            elem.val('');
+                        }
+                        reader.readAsText( files[i] );
                     }
-                    reader.readAsText( file );
-                }
+                }                
             })
         }
     }

@@ -1,4 +1,4 @@
-<section id="characterSheet">
+<section id="character-sheet">
     <form>
         <section id="meta" class="attr-group">
             <section>
@@ -348,8 +348,26 @@
                 </section>
             </div>
         </section>
-                
     </form>
 </section>
 
-<button ng-click="downloadSheet()">Download</button>
+<section id="control-tab">
+    <div class="buttons">
+        <span class="load-file">
+            <label for="load-file-input" class="icon-med icon-med-open" title="Abrir"></label>
+            <input id="load-file-input" multiple type="file" json-file when-load="pushLoadedSheet" value="Load File"></input>
+        </span>
+        <button ng-click="newSheet()" class="icon-med icon-med-new" title="Novo"></button>
+        <button ng-click="downloadSheet()" class="icon-med icon-med-save" title="Baixar"></button>
+        <button ng-click="downloadAllSheets()" class="icon-med icon-med-save-all" title="Baixar Todas"></button>
+    </div>
+    
+    <section id="sheet-list">
+        <ul>
+            <li ng-repeat="sheet in loadedSheets track by $index">
+                <a href="" ng-click="selectSheet(sheet)">{{sheet.jogador}} - {{sheet.nome}}</a>
+                <button ng-click="removeSheet($index)" class="icon icon-cross"></button>
+            </li>
+        </ul>
+    </section>    
+</section>

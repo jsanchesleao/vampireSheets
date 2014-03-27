@@ -1,22 +1,38 @@
-#characterSheet{
-    width: 900px;
-    margin: auto;
-    border: 3px double black;
+body{
+    background-color: #EEE;
 }
 
-#characterSheet h1{
+#control-tab{
+    width: 230px;
+    float: left;
+}
+
+#control-tab .buttons{
+    background-color: #FFF;
+    text-align: center;
+}
+
+#character-sheet{
+    width: 900px;
+    float: left;
+    border: 3px double black;
+    margin: 0 30px;
+    background-color: #FFF;
+}
+
+#character-sheet h1{
     font-size: 20px;
     margin: auto;
     text-align: center;
 }
 
-#characterSheet h2{
+#character-sheet h2{
     font-size: 16px;
     margin: auto;
     text-align: center;
 }
 
-#characterSheet hr{
+#character-sheet hr{
     padding: 0;
     border: none;
     border-top: medium double #333;
@@ -24,11 +40,11 @@
     text-align: center;
 }
 
-#characterSheet hr.with-text{
+#character-sheet hr.with-text{
     margin-bottom: -10px;
 }
 
-#characterSheet hr:after {
+#character-sheet hr:after {
     display: inline-block;
     position: relative; 
     top: -0.5em;  
@@ -37,11 +53,11 @@
     background: white;
 }
 
-#characterSheet select{
+#character-sheet select{
     width: 125px;
 }
 
-#characterSheet .text-input{
+#character-sheet .text-input{
     font-family: arial;
     font-style: italic;
 }
@@ -85,11 +101,29 @@
     text-align: center;
 }
 
+
+.load-file input{
+    display: none;
+}
+
+.load-file label{
+    display: inline-block;
+}
+
 .icon{
     width: 18px;
     height: 18px;
     border: 0;
     border-top: 2px;
+    cursor: pointer
+}
+
+.icon-med{
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-top: 2px;
+    cursor: pointer;
 }
 
 .icon-filled{
@@ -118,4 +152,20 @@
 
 .icon-plus{
     background: url(../img/icon-plus.png);
+}
+
+.icon-med-save{
+    background: url(../img/icon-med-save.png);
+}
+
+.icon-med-save-all{
+    background: url(../img/icon-med-save-all.png);
+}
+
+.icon-med-new{
+    background: url(../img/icon-med-new.png);
+}
+
+.icon-med-open{
+    background: url(../img/icon-med-open.png);
 }

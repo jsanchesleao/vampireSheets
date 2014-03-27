@@ -61,6 +61,10 @@ app.directive('bulleted', function(){
 
             displayValue( scope.model );
 
+            scope.$watch('model', function(){
+                displayValue( scope.model );
+            });
+
             function displayValue(value){
                 for(var i = 0; i < bullets.length; i++){
                     if( i < value ){

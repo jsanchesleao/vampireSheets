@@ -1,9 +1,9 @@
 {
-    "nome": "Jeff",
+    "nome": "Xabru",
     "disciplinas": [
         {
             "nome": "vicissitude",
-            "level": 3
+            "level": 1
         },
         {
             "nome": "auspicios",
@@ -21,6 +21,6 @@
         }
     ],
     "outrasCaracteristicas":[
-        "Perturbação: -2"
+        "Nenhuma"
     ]
 }

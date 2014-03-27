@@ -43,6 +43,10 @@ app.directive('hideBox', function(){
                 elem[0].focus();
             });
 
+            scope.$watch('model', function(){
+                text.html( convertToText(scope.model) );
+            });
+
         }
     }
 })

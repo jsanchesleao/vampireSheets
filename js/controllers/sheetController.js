@@ -1,5 +1,6 @@
-app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disciplina', 'Antecedente',function($scope, Cla, Arquetipo, Caminho, Disciplina, Antecedente){
+app.controller('SheetController', ['$scope','sheetFactory', 'Cla', 'Arquetipo','Caminho', 'Disciplina', 'Antecedente',function($scope, sheetFactory, Cla, Arquetipo, Caminho, Disciplina, Antecedente){
 
+    $scope.sheet = $scope.sheet || sheetFactory.create();
     $scope.nomeCaminho = $scope.sheet.caminho.info.nome;
 
     $scope.clas = Cla.get();
@@ -14,11 +15,19 @@ app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disc
     			$scope.sheet.caminho.info = $scope.caminhos[i];
     		}
     	}
-    }
+    };
 
     $scope.downloadSheet = function(){
         var name = prompt("Enter file name: ");
+        if(!name) return;
         var blob = new Blob([JSON.stringify( $scope.sheet )], {type: "application/json;charset=utf-8"});
+        saveAs(blob,  name + ".json");
+    };
+
+    $scope.downloadAllSheets = function(){
+        var name = prompt("Enter document name: ");
+        if(!name) return;
+        var blob = new Blob([JSON.stringify( $scope.loadedSheets )], {type: "application/json;charset=utf-8"});
         saveAs(blob,  name + ".json");
     };
 
@@ -33,7 +42,7 @@ app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disc
         if( $scope.sheet.disciplinas[index].nome == '' ){
             $scope.sheet.disciplinas.splice(index, 1);
         }
-    }
+    };
 
     $scope.addAntecedente = function(){
         $scope.sheet.antecedentes.push({
@@ -46,7 +55,7 @@ app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disc
     	if( $scope.sheet.antecedentes[index].nome == '' ){
     		$scope.sheet.antecedentes.splice(index, 1);
     	}
-    }
+    };
 
     $scope.addTrait = function(){
         $scope.sheet.outrasCaracteristicas.push('');
@@ -56,6 +65,40 @@ app.controller('SheetController', ['$scope', 'Cla', 'Arquetipo','Caminho', 'Disc
         if( $scope.sheet.outrasCaracteristicas[index] == '' ){
             $scope.sheet.outrasCaracteristicas.splice(index, 1);
         }
+    };
+
+
+    $scope.fileToLoad = {};
+    $scope.loadedSheets = [];
+
+    $scope.pushLoadedSheet = function(data){
+        if( data.constructor === Array ){
+            for( var i = 0; i < data.length; i++){
+                $scope.loadedSheets.push(data[i]);
+            }
+        }
+        else{
+            $scope.loadedSheets.push(data);
+        }
+    };
+
+    $scope.selectSheet = function(sheet){
+        $scope.sheet = sheet;
+        if( $scope.sheet.caminho && $scope.sheet.caminho.info ){
+            $scope.nomeCaminho = $scope.sheet.caminho.info.nome;
+        }
+    };
+
+    $scope.removeSheet = function(index){
+        if(confirm("Excluir ficha?")){
+            $scope.loadedSheets.splice(index, 1);
+        }
+    };
+
+    $scope.newSheet = function(){
+        var sheet = sheetFactory.create();
+        $scope.loadedSheets.push(sheet);
+        $scope.selectSheet(sheet);
     }
 
 }]);
