@@ -20,7 +20,7 @@ app.factory('sheetFactory', [function(){
                 },
                 disciplinas: [],
                 antecedentes: [],
-                outrasCaracteristicas: [],
+                outrasCaracteristicas: ["", "", "", "", ""],
                 caminho: {
                     info:{
                         conscienciaConviccao: 'Consciencia/Conviccao',
@@ -29,6 +29,9 @@ app.factory('sheetFactory', [function(){
                     },
                     level: 0
                 },
+                armas:[
+                    {}, {}, {}
+                ],
                 geracao: 12
             }
         }

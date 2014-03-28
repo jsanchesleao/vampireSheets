@@ -35,7 +35,7 @@ body{
 #character-sheet hr{
     padding: 0;
     border: none;
-    border-top: medium double #333;
+    border-top: thick double #333;
     color: #333;
     text-align: center;
 }
@@ -74,6 +74,18 @@ body{
     content: "Vantagens";
 }
 
+#divisor-outras-caracteristicas:after{
+    content: "Outras Caracteristicas";
+}
+
+#divisor-combate:after{
+    content: "Combate";
+}
+
+#divisor-caminho:after{
+    content: "Caminho";
+}
+
 .attr-group, #vantagens, #footer{
     overflow: hidden;
     margin-left: 5%;
@@ -81,7 +93,8 @@ body{
 
 .attr-group section, #vantagens section, #footer .col{
     float: left;
-    width: 33%;
+    width: 30%;
+    margin: 0 5px;
 }
 
 .attr-group div, #virtudes div, #disciplinas div, #antecedentes div{
@@ -97,10 +110,74 @@ body{
     width: 30px;
 }
 
+#outras-caracteristicas{
+    margin-bottom: 10px;
+}
+
+#outras-caracteristicas input {
+    width:100%;
+}
+
+.text-input{
+    border-bottom: 1px solid black;
+}
+
+.text-input input{
+    padding:0;
+    margin:0;
+    font-size:16px;
+    font-style:italic;
+    border:none;
+    outline:none;
+    background:transparent;
+}
+
+.selectTransform{
+    width:85px;
+    display:inline-block;
+    overflow:hidden;
+    position:relative;
+    background:#fff;
+}
+    .selectTransform .text-input select{
+        width:100px!important;
+        background:none;
+        border:none;
+        margin:0;
+        padding:0;
+        position:relative; z-index:2;
+        outline:none;
+    }
+
+#outras-caracteristicas .text-input-placeholder{
+    width: 100%;
+}
+
 #caminho, #caminho .text-input, #forcaDeVontade, #sangue, #experiencia{
     text-align: center;
 }
 
+#combate .text-input{
+    border: none;
+}
+
+#combate .text-input-placeholder{
+    min-width: 82px;
+}
+
+#combate input, #combate select{
+    width: 80px;
+}
+
+#combate table{
+    border-width: 0;
+    border-collapse: collapse;
+}
+
+#combate table td, #combate table th{
+    border: solid 1px;
+    min-height: 50px;
+}
 
 .load-file input{
     display: none;

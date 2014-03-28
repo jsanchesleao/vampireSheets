@@ -7,7 +7,7 @@ app.directive('hideBox', function(){
         },
         link: function(scope, elem, attrs){
 
-            var placeholder = scope.emptyText || '...';
+            var placeholder = scope.emptyText || '';
 
             function convertToText(value){
                 if( !value ) return placeholder;

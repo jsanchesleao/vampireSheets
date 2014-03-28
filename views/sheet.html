@@ -70,7 +70,7 @@
                 <h2>Fisicos</h2>
                 <div>
                     <label for="forca">Forca:</label>
-                    <input bulleted bulleted type="number" id="forca" ng-model="sheet.attrs.forca">
+                    <input bulleted type="number" id="forca" ng-model="sheet.attrs.forca">
                 </div>
                 <div>
                     <label for="destreza">Destreza:</label>
@@ -295,17 +295,58 @@
 
         <section id="footer">
             <div class="col" id="col1">
-                <section id="outrasCaracteristicas">
-                    <h2>Outras Caracteristicas</h2>
+                <hr class="with-text" id="divisor-outras-caracteristicas">
+                <section id="outras-caracteristicas">
                     <button ng-click="addTrait()" class="icon icon-plus"></button>
-                    <div ng-repeat="trait in sheet.outrasCaracteristicas track by $index">
-                        <input hide-box when-empty="________________" type="text" id="nome" ng-model="sheet.outrasCaracteristicas[$index]" ng-blur="removeTrait($index)">
+                    <div hide-box-container ng-repeat="trait in sheet.outrasCaracteristicas track by $index">
+                        <input hide-box type="text" id="nome" ng-model="sheet.outrasCaracteristicas[$index]" ng-blur="removeTrait($index)">
                     </div>
+                </section>
+                <hr class="with-text" id="divisor-combate">
+                <section id="combate">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Arma</th>
+                                <th>Dificuldade</th>
+                                <th>Dano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="arma in sheet.armas track by $index">
+                                <td hide-box-container>
+                                    <input hide-box type="text" ng-model="sheet.armas[$index].nome">
+                                </td>
+                                <td hide-box-container>
+
+                                <div class="selectTransform">
+
+                                    <select hide-box ng-model="sheet.armas[$index].dificuldade">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+
+                                </div>
+                                
+                                </td>
+                                <td hide-box-container>
+                                    <input hide-box type="text" ng-model="sheet.armas[$index].dano">
+                                </td>
+                            </tr>                            
+                        </tbody>
+                    </table>
                 </section>
             </div>
             <div class="col" id="col2">
+                <hr class="with-text" id="divisor-caminho">
                 <section id="caminho">
-                    <h2>Caminho</h2>
                     <div>
                         <select hide-box when-empty="________________" type="text" ng-model="nomeCaminho" ng-change="selecionarCaminho()">
                             <option ng-repeat="caminho in caminhos" value="{{caminho.nome}}">{{caminho.nome}}</option>

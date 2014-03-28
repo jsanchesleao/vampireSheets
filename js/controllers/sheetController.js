@@ -62,6 +62,7 @@ app.controller('SheetController', ['$scope','sheetFactory', 'Cla', 'Arquetipo','
     };
 
     $scope.removeTrait = function(index){
+        if( $scope.sheet.outrasCaracteristicas.length <= 5 ) return;
         if( $scope.sheet.outrasCaracteristicas[index] == '' ){
             $scope.sheet.outrasCaracteristicas.splice(index, 1);
         }
