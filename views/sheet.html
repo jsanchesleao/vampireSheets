@@ -4,33 +4,33 @@
             <section>
                 <div>
                     <label for="nome">Nome:</label>
-                    <input hide-box when-empty="________________" type="text" id="nome" ng-model="sheet.nome">
+                    <input type="text" id="nome" ng-model="sheet.nome">
                 </div>
                 <div>
                     <label for="jogador">Jogador:</label>
-                    <input hide-box when-empty="________________" type="text" id="jogador" ng-model="sheet.jogador">
+                    <input type="text" id="jogador" ng-model="sheet.jogador">
                 </div>
                 <div>
                     <label for="cronicas">Cronicas:</label>
-                    <input hide-box when-empty="________________" type="text" id="cronicas" ng-model="sheet.cronicas">
+                    <input type="text" id="cronicas" ng-model="sheet.cronicas">
                 </div>
             </section>
             <section>
                 <div>
                     <label for="natureza">Natureza:</label>
-                    <select hide-box when-empty="________________" id="natureza" ng-model="sheet.natureza">
+                    <select transparent-select hide-box when-empty="________________" id="natureza" ng-model="sheet.natureza">
                         <option ng-repeat="natureza in arquetipos" value="{{natureza.nome}}">{{natureza.nome}}</option>
                     </select>
                 </div>
                 <div>
                     <label for="comportamento">Comportamento:</label>
-                    <select hide-box when-empty="________________" id="comportamento" ng-model="sheet.comportamento">
+                    <select transparent-select hide-box when-empty="________________" id="comportamento" ng-model="sheet.comportamento">
                         <option ng-repeat="comportamento in arquetipos" value="{{comportamento.nome}}">{{comportamento.nome}}</option>
                     </select>
                 </div>
                 <div>
                     <label for="cla">Cla:</label>
-                    <select hide-box when-empty="________________" id="cla" ng-model="sheet.cla">
+                    <select hide-box when-empty="________________" transparent-select id="cla" ng-model="sheet.cla">
                         <option ng-repeat="cla in clas" value="{{cla.nome}}">{{cla.nome}}</option>
                     </select>
                 </div>
@@ -38,7 +38,7 @@
             <section>
                 <div>
                     <label for="geracao">Geracao:</label>
-                    <select hide-box when-empty="________________" id="geracao" ng-model="sheet.geracao">
+                    <select transparent-select hide-box when-empty="__________________" id="geracao" ng-model="sheet.geracao">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -56,11 +56,11 @@
                 </div>
                 <div>
                     <label for="refugio">Refugio:</label>
-                    <input hide-box when-empty="________________" type="text" id="refugio" ng-model="sheet.refugio">
+                    <input type="text" id="refugio" ng-model="sheet.refugio">
                 </div>
                 <div>
                     <label for="conceito">Conceito:</label>
-                    <input hide-box when-empty="________________" type="text" id="conceito" ng-model="sheet.conceito">
+                    <input type="text" id="conceito" ng-model="sheet.conceito">
                 </div>
             </section>
         </section>
@@ -256,7 +256,7 @@
                 <h2>Disciplinas</h2>
                 <button ng-click="addDisciplina()" class="icon icon-plus"></button>
                 <div ng-repeat="disciplina in sheet.disciplinas track by $index">
-                    <select hide-box when-empty="________________" ng-blur="removerDisciplina($index)" ng-model="disciplina.nome">
+                    <select ng-blur="removerDisciplina($index)" ng-model="disciplina.nome">
                         <option value=""> [Remover] </option>
                         <option ng-repeat="disciplina in disciplinas" value="{{disciplina.nome}}">{{disciplina.nome}}</option>
                     </select>
@@ -267,7 +267,7 @@
                 <h2>Antecedentes</h2>
                 <button ng-click="addAntecedente()" class="icon icon-plus"></button>
                 <div ng-repeat="antecedente in sheet.antecedentes track by $index">
-                    <select hide-box when-empty="________________" ng-blur="removerAntecedente($index)" ng-model="antecedente.nome">
+                    <select ng-blur="removerAntecedente($index)" ng-model="antecedente.nome">
                         <option value=""> [Remover] </option>
                         <option ng-repeat="antecedente in antecedentes" value="{{antecedente.nome}}">{{antecedente.nome}}</option>
                     </select>
