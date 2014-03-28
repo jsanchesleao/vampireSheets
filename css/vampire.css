@@ -2,6 +2,27 @@ body{
     background-color: #EEE;
 }
 
+.transparent-input{
+    margin: 2px 0 -2px 0;
+    width:85px;
+    display:inline-block;
+    overflow:hidden;
+    position:relative;
+    background:#fff;
+}
+    .transparent-input  select{
+        width:100px!important;
+        font-size:16px;
+        font-style:italic;
+        background:none;
+        border:none;
+        margin:0;
+        padding:0;
+        position:relative; z-index:2;
+        outline:none;
+        cursor: pointer;
+    }
+
 #control-tab{
     width: 230px;
     float: left;
@@ -24,6 +45,17 @@ body{
     font-size: 20px;
     margin: auto;
     text-align: center;
+}
+
+#character-sheet input{
+    padding:0;
+    margin:0;
+    font-size:16px;
+    font-style:italic;
+    border:none;
+    border-bottom: 1px solid black;
+    outline:none;
+    background:transparent;
 }
 
 #character-sheet h2{
@@ -122,39 +154,18 @@ body{
     border-bottom: 1px solid black;
 }
 
-.text-input input{
-    padding:0;
-    margin:0;
-    font-size:16px;
-    font-style:italic;
-    border:none;
-    outline:none;
-    background:transparent;
-}
-
-.selectTransform{
-    width:85px;
-    display:inline-block;
-    overflow:hidden;
-    position:relative;
-    background:#fff;
-}
-    .selectTransform .text-input select{
-        width:100px!important;
-        background:none;
-        border:none;
-        margin:0;
-        padding:0;
-        position:relative; z-index:2;
-        outline:none;
-    }
-
 #outras-caracteristicas .text-input-placeholder{
     width: 100%;
 }
 
-#caminho, #caminho .text-input, #forcaDeVontade, #sangue, #experiencia{
+#caminho, #forcaDeVontade, #sangue, #experiencia{
     text-align: center;
+}
+
+#caminho .nome-caminho{
+    border-bottom: 1px solid black;
+    width: 70%;
+    margin: auto;
 }
 
 #combate .text-input{
@@ -167,6 +178,7 @@ body{
 
 #combate input, #combate select{
     width: 80px;
+    border: none;
 }
 
 #combate table{

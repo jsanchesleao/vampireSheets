@@ -298,8 +298,8 @@
                 <hr class="with-text" id="divisor-outras-caracteristicas">
                 <section id="outras-caracteristicas">
                     <button ng-click="addTrait()" class="icon icon-plus"></button>
-                    <div hide-box-container ng-repeat="trait in sheet.outrasCaracteristicas track by $index">
-                        <input hide-box type="text" id="nome" ng-model="sheet.outrasCaracteristicas[$index]" ng-blur="removeTrait($index)">
+                    <div ng-repeat="trait in sheet.outrasCaracteristicas track by $index">
+                        <input type="text" id="nome" ng-model="sheet.outrasCaracteristicas[$index]" ng-blur="removeTrait($index)">
                     </div>
                 </section>
                 <hr class="with-text" id="divisor-combate">
@@ -314,14 +314,12 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="arma in sheet.armas track by $index">
-                                <td hide-box-container>
-                                    <input hide-box type="text" ng-model="sheet.armas[$index].nome">
+                                <td>
+                                    <input type="text" ng-model="sheet.armas[$index].nome">
                                 </td>
-                                <td hide-box-container>
+                                <td>
 
-                                <div class="selectTransform">
-
-                                    <select hide-box ng-model="sheet.armas[$index].dificuldade">
+                                    <select transparent-select ng-model="sheet.armas[$index].dificuldade">
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
@@ -333,11 +331,9 @@
                                         <option value="10">10</option>
                                     </select>
 
-                                </div>
-                                
                                 </td>
-                                <td hide-box-container>
-                                    <input hide-box type="text" ng-model="sheet.armas[$index].dano">
+                                <td>
+                                    <input type="text" ng-model="sheet.armas[$index].dano">
                                 </td>
                             </tr>                            
                         </tbody>
@@ -347,8 +343,8 @@
             <div class="col" id="col2">
                 <hr class="with-text" id="divisor-caminho">
                 <section id="caminho">
-                    <div>
-                        <select hide-box when-empty="________________" type="text" ng-model="nomeCaminho" ng-change="selecionarCaminho()">
+                    <div class="nome-caminho">
+                        <select transparent-select type="text" ng-model="nomeCaminho" ng-change="selecionarCaminho()">
                             <option ng-repeat="caminho in caminhos" value="{{caminho.nome}}">{{caminho.nome}}</option>
                         </select>
                     </div>
