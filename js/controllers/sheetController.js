@@ -68,6 +68,19 @@ app.controller('SheetController', ['$scope','sheetFactory', 'Cla', 'Arquetipo','
         }
     };
 
+    $scope.addArma = function(){
+        $scope.sheet.armas.push({});
+    };
+
+    $scope.removeArma = function(index){
+        if($scope.sheet.armas.length > 3){
+            $scope.sheet.armas.splice(index, 1);
+        }
+        else{
+            $scope.sheet.armas[index] = {};
+        }
+    };
+
 
     $scope.fileToLoad = {};
     $scope.loadedSheets = [];

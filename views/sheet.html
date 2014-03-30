@@ -4,33 +4,36 @@
             <section>
                 <div>
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" ng-model="sheet.nome">
+                    <input type="text" id="nome" ng-model="sheet.nome" placeholder="________________">
                 </div>
                 <div>
                     <label for="jogador">Jogador:</label>
-                    <input type="text" id="jogador" ng-model="sheet.jogador">
+                    <input type="text" id="jogador" ng-model="sheet.jogador" placeholder="________________">
                 </div>
                 <div>
                     <label for="cronicas">Cronicas:</label>
-                    <input type="text" id="cronicas" ng-model="sheet.cronicas">
+                    <input type="text" id="cronicas" ng-model="sheet.cronicas" placeholder="________________">
                 </div>
             </section>
             <section>
                 <div>
                     <label for="natureza">Natureza:</label>
-                    <select transparent-select hide-box when-empty="________________" id="natureza" ng-model="sheet.natureza">
+                    <select id="natureza" ng-model="sheet.natureza">
+                        <option value="" disabled>_________________</option>
                         <option ng-repeat="natureza in arquetipos" value="{{natureza.nome}}">{{natureza.nome}}</option>
                     </select>
                 </div>
                 <div>
                     <label for="comportamento">Comportamento:</label>
-                    <select transparent-select hide-box when-empty="________________" id="comportamento" ng-model="sheet.comportamento">
+                    <select id="comportamento" ng-model="sheet.comportamento">
+                        <option value="" disabled>_________________</option>
                         <option ng-repeat="comportamento in arquetipos" value="{{comportamento.nome}}">{{comportamento.nome}}</option>
                     </select>
                 </div>
                 <div>
                     <label for="cla">Cla:</label>
-                    <select hide-box when-empty="________________" transparent-select id="cla" ng-model="sheet.cla">
+                    <select id="cla" ng-model="sheet.cla">
+                        <option value="" disabled>_________________</option>
                         <option ng-repeat="cla in clas" value="{{cla.nome}}">{{cla.nome}}</option>
                     </select>
                 </div>
@@ -38,7 +41,8 @@
             <section>
                 <div>
                     <label for="geracao">Geracao:</label>
-                    <select transparent-select hide-box when-empty="__________________" id="geracao" ng-model="sheet.geracao">
+                    <select id="geracao" ng-model="sheet.geracao">
+                        <option value="" disabled>_________________</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -56,11 +60,11 @@
                 </div>
                 <div>
                     <label for="refugio">Refugio:</label>
-                    <input type="text" id="refugio" ng-model="sheet.refugio">
+                    <input type="text" id="refugio" ng-model="sheet.refugio" placeholder="________________">
                 </div>
                 <div>
                     <label for="conceito">Conceito:</label>
-                    <input type="text" id="conceito" ng-model="sheet.conceito">
+                    <input type="text" id="conceito" ng-model="sheet.conceito" placeholder="________________">
                 </div>
             </section>
         </section>
@@ -304,9 +308,11 @@
                 </section>
                 <hr class="with-text" id="divisor-combate">
                 <section id="combate">
+                    <button class="icon icon-plus" ng-click="addArma()"></button>
                     <table>
                         <thead>
                             <tr>
+                                <th></th>
                                 <th>Arma</th>
                                 <th>Dificuldade</th>
                                 <th>Dano</th>
@@ -315,11 +321,14 @@
                         <tbody>
                             <tr ng-repeat="arma in sheet.armas track by $index">
                                 <td>
+                                    <button class="icon icon-cross" ng-click="removeArma($index)"></button>
+                                </td>
+                                <td>
                                     <input type="text" ng-model="sheet.armas[$index].nome">
                                 </td>
                                 <td>
 
-                                    <select transparent-select ng-model="sheet.armas[$index].dificuldade">
+                                    <select ng-model="sheet.armas[$index].dificuldade">
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
@@ -344,7 +353,8 @@
                 <hr class="with-text" id="divisor-caminho">
                 <section id="caminho">
                     <div class="nome-caminho">
-                        <select transparent-select type="text" ng-model="nomeCaminho" ng-change="selecionarCaminho()">
+                        <select type="text" ng-model="nomeCaminho" ng-change="selecionarCaminho()">
+                            <option value="" disabled>__________________</option>
                             <option ng-repeat="caminho in caminhos" value="{{caminho.nome}}">{{caminho.nome}}</option>
                         </select>
                     </div>
@@ -352,8 +362,8 @@
                         <input bulleted max-value="10" type="number" ng-model="sheet.caminho.level" >
                     </div>
                 </section>
+                <hr class="with-text" id="divisor-forca-de-vontade">
                 <section id="forcaDeVontade">
-                    <h2>Forca de Vontade</h2>
                     <div>
                         <input bulleted max-value="10" type="number" ng-model="sheet.forcaDeVontade.max" >
                     </div>
@@ -361,8 +371,8 @@
                         <input bulleted max-value="10" empty-class="icon-square-empty" filled-class="icon-square-filled" type="number" ng-model="sheet.forcaDeVontade.atual" >
                     </div>
                 </section>
+                <hr id="divisor-pontos-de-sangue">
                 <section id="sangue">
-                    <h2>Pontos de Sangue</h2>
                     <input bulleted max-value="20" group-by="10" empty-class="icon-square-empty" filled-class="icon-square-filled" type="number" ng-model="sheet.pontosDeSangue" >
                 </section>
             </div>
