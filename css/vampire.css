@@ -72,6 +72,7 @@ body{
 
     -webkit-appearance: none;
     -moz-appearance: none;
+    text-overflow: '';
 }
 
 #character-sheet select:focus{
@@ -107,13 +108,13 @@ body{
 }
 
 #character-sheet hr.with-text{
-    margin-bottom: -10px;
+    margin-bottom: 10px;
 }
 
 #character-sheet hr:after {
     display: inline-block;
     position: relative; 
-    top: -0.5em;  
+    top: -0.7em;  
     font-size: 1.5em;
     padding: 0 0.25em;
     background: white;
