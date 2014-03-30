@@ -71,7 +71,7 @@
         <hr id="divisor-atributos" class="with-text">
         <section id="atributos" class="attr-group">
             <section>
-                <h2>Fisicos</h2>
+                <h1>Fisicos</h1>
                 <div>
                     <label for="forca">Forca:</label>
                     <input bulleted type="number" id="forca" ng-model="sheet.attrs.forca">
@@ -86,7 +86,7 @@
                 </div>
             </section>
             <section>
-                <h2>Sociais</h2>
+                <h1>Sociais</h1>
                 <div>
                     <label for="carisma">Carisma:</label>
                     <input bulleted type="number" id="carisma" ng-model="sheet.attrs.carisma">
@@ -101,7 +101,7 @@
                 </div>
             </section>
             <section>
-                <h2>Mentais</h2>
+                <h1>Mentais</h1>
                 <div>
                     <label for="percepcao">Percepcao:</label>
                     <input bulleted type="number" id="percepcao" ng-model="sheet.attrs.percepcao">
@@ -120,7 +120,7 @@
         <hr id="divisor-habilidades" class="with-text">
         <section id="habilidades" class="attr-group">
             <section>
-                <h2>Talentos</h2>
+                <h1>Talentos</h1>
                 <div>
                     <label for="representacao">Representacao:</label>
                     <input bulleted type="number" id="representacao" ng-model="sheet.skills.representacao">
@@ -165,7 +165,7 @@
         
         
             <section>
-                <h2>Pericias</h2>
+                <h1>Pericias</h1>
                 <div>
                     <label for="empatiaAnimais">Empatia C/ Animais:</label>
                     <input bulleted type="number" id="empatiaAnimais" ng-model="sheet.skills.empatiaAnimais">
@@ -209,7 +209,7 @@
             </section>
 
             <section>
-                <h2>Conhecimentos</h2>
+                <h1>Conhecimentos</h1>
                 <div>
                     <label for="instrucao">Instrucao:</label>
                     <input bulleted type="number" id="instrucao" ng-model="sheet.skills.instrucao">
@@ -257,7 +257,7 @@
         <hr id="divisor-vantagens" class="with-text">
         <section id="vantagens">
             <section id="disciplinas">
-                <h2>Disciplinas</h2>
+                <h1>Disciplinas</h1>
                 <button ng-click="addDisciplina()" class="icon icon-plus"></button>
                 <div ng-repeat="disciplina in sheet.disciplinas track by $index">
                     <select ng-blur="removerDisciplina($index)" ng-model="disciplina.nome">
@@ -269,7 +269,7 @@
                 </div>
             </section>
             <section id="antecedentes">
-                <h2>Antecedentes</h2>
+                <h1>Antecedentes</h1>
                 <button ng-click="addAntecedente()" class="icon icon-plus"></button>
                 <div ng-repeat="antecedente in sheet.antecedentes track by $index">
                     <select ng-blur="removerAntecedente($index)" ng-model="antecedente.nome">
@@ -281,7 +281,7 @@
                 </div>
             </section>
             <section id="virtudes">
-                <h2>Virtudes</h2>
+                <h1>Virtudes</h1>
                 <div><br></div>
                 <div>
                     <label for="conscienciaConviccao">{{sheet.caminho.info.conscienciaConviccao}}:</label>
