@@ -18,8 +18,8 @@ app.factory('sheetFactory', [function(){
                     autoControleInstinto: 1,
                     coragem: 1
                 },
-                disciplinas: [],
-                antecedentes: [],
+                disciplinas: [{},{},{},{},{}],
+                antecedentes: [{},{},{},{},{}],
                 outrasCaracteristicas: ["", "", "", "", ""],
                 caminho: {
                     info:{

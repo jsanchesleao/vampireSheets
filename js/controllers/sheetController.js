@@ -42,6 +42,9 @@ app.controller('SheetController', ['$scope','sheetFactory', 'Cla', 'Arquetipo','
         if( $scope.sheet.disciplinas[index].nome == '' ){
             $scope.sheet.disciplinas.splice(index, 1);
         }
+        if( $scope.sheet.disciplinas.length < 5 ){
+            $scope.sheet.disciplinas.push({});
+        }
     };
 
     $scope.addAntecedente = function(){
@@ -55,6 +58,9 @@ app.controller('SheetController', ['$scope','sheetFactory', 'Cla', 'Arquetipo','
     	if( $scope.sheet.antecedentes[index].nome == '' ){
     		$scope.sheet.antecedentes.splice(index, 1);
     	}
+        if( $scope.sheet.antecedentes.length < 5 ){
+            $scope.sheet.antecedentes.push({});
+        }
     };
 
     $scope.addTrait = function(){

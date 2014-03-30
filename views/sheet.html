@@ -261,6 +261,7 @@
                 <button ng-click="addDisciplina()" class="icon icon-plus"></button>
                 <div ng-repeat="disciplina in sheet.disciplinas track by $index">
                     <select ng-blur="removerDisciplina($index)" ng-model="disciplina.nome">
+                        <option value="" disabled>________________________</option>
                         <option value=""> [Remover] </option>
                         <option ng-repeat="disciplina in disciplinas" value="{{disciplina.nome}}">{{disciplina.nome}}</option>
                     </select>
@@ -272,6 +273,7 @@
                 <button ng-click="addAntecedente()" class="icon icon-plus"></button>
                 <div ng-repeat="antecedente in sheet.antecedentes track by $index">
                     <select ng-blur="removerAntecedente($index)" ng-model="antecedente.nome">
+                        <option value="" disabled>________________________</option>
                         <option value=""> [Remover] </option>
                         <option ng-repeat="antecedente in antecedentes" value="{{antecedente.nome}}">{{antecedente.nome}}</option>
                     </select>
@@ -280,14 +282,17 @@
             </section>
             <section id="virtudes">
                 <h2>Virtudes</h2>
+                <div><br></div>
                 <div>
                     <label for="conscienciaConviccao">{{sheet.caminho.info.conscienciaConviccao}}:</label>
                     <input bulleted max-value="5" type="number" id="conscienciaConviccao" ng-model="sheet.virt.conscienciaConviccao">
                 </div>
+                <div><br></div>
                 <div>
                     <label for="autoControleInstinto">{{sheet.caminho.info.autocontroleInstinto}}:</label>
                     <input bulleted max-value="5" type="number" id="autoControleInstinto" ng-model="sheet.virt.autoControleInstinto">
                 </div>
+                <div><br></div>
                 <div>
                     <label for="coragem">Coragem:</label>
                     <input bulleted max-value="5" type="number" id="coragem" ng-model="sheet.virt.coragem">
@@ -361,6 +366,7 @@
                     <div>
                         <input bulleted max-value="10" type="number" ng-model="sheet.caminho.level" >
                     </div>
+                    <div><br></div>
                 </section>
                 <hr class="with-text" id="divisor-forca-de-vontade">
                 <section id="forcaDeVontade">
@@ -370,6 +376,7 @@
                     <div>
                         <input bulleted max-value="10" empty-class="icon-square-empty" filled-class="icon-square-filled" type="number" ng-model="sheet.forcaDeVontade.atual" >
                     </div>
+                    <div><br></div>
                 </section>
                 <hr id="divisor-pontos-de-sangue">
                 <section id="sangue">
@@ -377,8 +384,8 @@
                 </section>
             </div>
             <div class="col" id="col3">
+                <hr class="with-text" id="divisor-vitalidade">
                 <section id="vitalidade">
-                    <h2>Vitalidade</h2>
                     <ul>
                         <li>Escoriado</li>
                         <li>Machucado</li>
@@ -389,8 +396,9 @@
                         <li>Incapacitado</li>
                     </ul>
                 </section>
+                <hr class="with-text" id="divisor-experiencia">
                 <section id="experiencia">
-                    <h2>Experiencia</h2>
+                    <div><br></div>
                     <input type="number" ng-model="sheet.exp">
                 </section>
             </div>

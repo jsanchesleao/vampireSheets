@@ -159,6 +159,14 @@ body{
     content: "Pontos de Sangue";
 }
 
+#divisor-vitalidade:after{
+    content: "Vitalidade";
+}
+
+#divisor-experiencia:after{
+    content: "Experiencia";
+}
+
 .attr-group, #vantagens, #footer{
     overflow: hidden;
     margin-left: 5%;
@@ -170,12 +178,12 @@ body{
     margin: 0 5px;
 }
 
-.col hr{
-    margin-top: 20px;
-}
-
 .attr-group div, #virtudes div, #disciplinas div, #antecedentes div{
     display: table-row;
+}
+
+#virtudes div{
+    margin-bottom: 20px;
 }
 
 .attr-group label, #virtudes label, #disciplinas label, #antecedentes label, .text-input-placeholder{
@@ -230,6 +238,11 @@ body{
 
 #combate table th:first-child{
     border: none;
+}
+
+#experiencia input{
+    border: 2px solid black;
+    height: 35px;
 }
 
 .load-file input{
