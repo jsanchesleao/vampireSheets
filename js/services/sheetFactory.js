@@ -32,7 +32,16 @@ app.factory('sheetFactory', [function(){
                 armas:[
                     {}, {}, {}
                 ],
-                geracao: 12
+                geracao: 12,
+                vitalidade: {
+                    escoriado: 'ok',
+                    machucado: 'ok',
+                    ferido: 'ok',
+                    feridoGrave: 'ok',
+                    espancado: 'ok',
+                    aleijado: 'ok',
+                    incapacitado: 'ok'
+                }
             }
         }
     }

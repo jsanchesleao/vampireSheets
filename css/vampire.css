@@ -61,7 +61,7 @@ body{
 #character-sheet select{
     font-size:16px;
     font-style:italic;
-    text-indent: 10px;
+    text-indent: 1px;
     background:none;
     border:none;
     margin:0;
@@ -83,10 +83,17 @@ body{
     display: none;
 }
 
-#character-sheet .text-input{
-    font-size: 16px;
-    font-style: italic;
-    font-family: arial;
+#character-sheet .divisor {
+    font-size: 1.5em;
+    margin-top: -26px;
+    margin-bottom: 10px;
+    background-color: white;
+    display: table;
+}
+
+#character-sheet label{
+    font-size: 14px;
+    font-family: Palatino;
 }
 
 #meta select{
@@ -105,19 +112,6 @@ body{
     border-top: thick double #333;
     color: #333;
     text-align: center;
-}
-
-#character-sheet hr.with-text{
-    margin-bottom: 10px;
-}
-
-#character-sheet hr:after {
-    display: inline-block;
-    position: relative; 
-    top: -0.7em;  
-    font-size: 1.5em;
-    padding: 0 0.25em;
-    background: white;
 }
 
 #character-sheet select{
@@ -164,10 +158,6 @@ body{
     content: "Vitalidade";
 }
 
-#divisor-experiencia:after{
-    content: "Experiencia";
-}
-
 .attr-group, #vantagens, #footer{
     overflow: hidden;
     margin-left: 5%;
@@ -175,8 +165,12 @@ body{
 
 .attr-group section, #vantagens section, #footer .col{
     float: left;
-    width: 30%;
+    width: 32%;
     margin: 0 5px;
+}
+
+.col > section {
+    margin-bottom: 40px;
 }
 
 .attr-group div, #virtudes div, #disciplinas div, #antecedentes div{
@@ -244,6 +238,31 @@ body{
 #experiencia input{
     border: 2px solid black;
     height: 35px;
+}
+
+#vitalidade li{
+    height: 22px;
+    width: 200px;
+}
+
+#vitalidade .modificador{
+    float: right;
+    margin-right: 20px;
+}
+
+#vitalidade .vitalidade-title{
+    font-size: 14px;
+}
+
+.level-vitalidade input, .level-vitalidade label{
+    display: none;
+}
+
+.level-vitalidade input:checked + label{
+    display: inline-block;
+    float: right;
+    box-shadow: inset 0 0 5px black;
+    border: 1px solid black;
 }
 
 .load-file input{

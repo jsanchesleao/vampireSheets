@@ -68,8 +68,8 @@
                 </div>
             </section>
         </section>
-        <hr id="divisor-atributos" class="with-text">
-        <br>
+        <hr>
+        <h1 class="divisor">Atributos</h1>
         <section id="atributos" class="attr-group">
             <section>
                 <h1>Fisicos</h1>
@@ -118,8 +118,8 @@
             </section>
         </section>
             
-        <hr id="divisor-habilidades" class="with-text">
-        <br>
+        <hr>
+        <h1 class="divisor">Habilidades</h1>
         <section id="habilidades" class="attr-group">
             <section>
                 <h1>Talentos</h1>
@@ -256,8 +256,8 @@
             
         </section>
 
-        <hr id="divisor-vantagens" class="with-text">
-        <br>
+        <hr>
+        <h1 class="divisor">Vantagens</h1>
         <section id="vantagens">
             <section id="disciplinas">
                 <h1>Disciplinas</h1>
@@ -285,7 +285,7 @@
             </section>
             <section id="virtudes">
                 <h1>Virtudes</h1>
-                <div><br></div>
+                
                 <div>
                     <label for="conscienciaConviccao">{{sheet.caminho.info.conscienciaConviccao}}:</label>
                     <input bulleted max-value="5" type="number" id="conscienciaConviccao" ng-model="sheet.virt.conscienciaConviccao">
@@ -307,14 +307,16 @@
 
         <section id="footer">
             <div class="col" id="col1">
-                <hr class="with-text" id="divisor-outras-caracteristicas">
+                <hr>
+                <h1 class="divisor">Outras Caracter&iacute;sticas</h1>
                 <section id="outras-caracteristicas">
                     <button ng-click="addTrait()" class="icon icon-plus"></button>
                     <div ng-repeat="trait in sheet.outrasCaracteristicas track by $index">
                         <input type="text" id="nome" ng-model="sheet.outrasCaracteristicas[$index]" ng-blur="removeTrait($index)">
                     </div>
                 </section>
-                <hr class="with-text" id="divisor-combate">
+                <hr>
+                <h1 class="divisor">Combate</h1>
                 <section id="combate">
                     <button class="icon icon-plus" ng-click="addArma()"></button>
                     <table>
@@ -358,7 +360,8 @@
                 </section>
             </div>
             <div class="col" id="col2">
-                <hr class="with-text" id="divisor-caminho">
+                <hr>
+                <h1 class="divisor">Caminho</h1>
                 <section id="caminho">
                     <div class="nome-caminho">
                         <select type="text" ng-model="nomeCaminho" ng-change="selecionarCaminho()">
@@ -369,9 +372,10 @@
                     <div>
                         <input bulleted max-value="10" type="number" ng-model="sheet.caminho.level" >
                     </div>
-                    <div><br></div>
+                    
                 </section>
-                <hr class="with-text" id="divisor-forca-de-vontade">
+                <hr>
+                <h1 class="divisor">For&ccedil;a de Vontade</h1>
                 <section id="forcaDeVontade">
                     <div>
                         <input bulleted max-value="10" type="number" ng-model="sheet.forcaDeVontade.max" >
@@ -379,29 +383,56 @@
                     <div>
                         <input bulleted max-value="10" empty-class="icon-square-empty" filled-class="icon-square-filled" type="number" ng-model="sheet.forcaDeVontade.atual" >
                     </div>
-                    <div><br></div>
+                    
                 </section>
-                <hr id="divisor-pontos-de-sangue">
+                <hr>
+                <h1 class="divisor">Pontos de Sangue</h1>
                 <section id="sangue">
                     <input bulleted max-value="20" group-by="10" empty-class="icon-square-empty" filled-class="icon-square-filled" type="number" ng-model="sheet.pontosDeSangue" >
                 </section>
             </div>
             <div class="col" id="col3">
-                <hr class="with-text" id="divisor-vitalidade">
+                <hr>
+                <h1 class="divisor">Vitalidade</h1>
                 <section id="vitalidade">
                     <ul>
-                        <li>Escoriado</li>
-                        <li>Machucado</li>
-                        <li>Ferido</li>
-                        <li>Ferido Gravemente</li>
-                        <li>Espancado</li>
-                        <li>Aleijado</li>
-                        <li>Incapacitado</li>
+                        <li ng-repeat="vitalidade in vitalidades">
+                            <span class="vitalidade-title">{{vitalidade.name}}</span>
+                            <span class="level-vitalidade">
+                                <input 
+                                    id="level-vitalidade-{{vitalidade.value}}-ok" 
+                                    checked 
+                                    type="radio" 
+                                    name="level_vitalidade_{{vitalidade.value}}" 
+                                    value="ok" 
+                                    ng-model="sheet.vitalidade[vitalidade.value]">
+                                <label for="level-vitalidade-{{vitalidade.value}}-dmg" class="icon"></label>
+
+                                <input 
+                                    id="level-vitalidade-{{vitalidade.value}}-dmg" 
+                                    type="radio" 
+                                    name="level_vitalidade_{{vitalidade.value}}" 
+                                    value="dmg" 
+                                    ng-model="sheet.vitalidade[vitalidade.value]"
+                                >
+                                <label for="level-vitalidade-{{vitalidade.value}}-aggr" class="icon icon-check"></label>
+
+                                <input 
+                                    id="level-vitalidade-{{vitalidade.value}}-aggr" 
+                                    type="radio" 
+                                    name="level_vitalidade_{{vitalidade.value}}" 
+                                    value="aggr" 
+                                    ng-model="sheet.vitalidade[vitalidade.value]"
+                                    >
+                                <label for="level-vitalidade-{{vitalidade.value}}-ok" class="icon icon-cross"></label>
+                            </span>
+                            <span class="modificador">{{vitalidade.modifier}}</span>
+                        </li>
                     </ul>
                 </section>
                 <hr class="with-text" id="divisor-experiencia">
                 <section id="experiencia">
-                    <div><br></div>
+                    <h1 class="divisor">Experi&ecirc;ncia</h1>
                     <input type="number" ng-model="sheet.exp">
                 </section>
             </div>

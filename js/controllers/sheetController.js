@@ -1,5 +1,15 @@
 app.controller('SheetController', ['$scope','sheetFactory', 'Cla', 'Arquetipo','Caminho', 'Disciplina', 'Antecedente',function($scope, sheetFactory, Cla, Arquetipo, Caminho, Disciplina, Antecedente){
 
+    $scope.vitalidades = [
+        {name: "Escoriado", modifier: '', value: 'escoriado'},
+        {name: "Machucado", modifier: '-1', value: 'machucado'},
+        {name: "Ferido", modifier: '-1', value: 'ferido'},
+        {name: "Ferido Gravemente", modifier: '-2', value: 'feridoGrave'},
+        {name: "Espancado", modifier: '-2', value: 'espancado'},
+        {name: "Aleijado", modifier: '-5', value: 'aleijado'},
+        {name: "Incapacitado", modifier: '', value: 'incapacitado'},
+    ];
+
     $scope.sheet = $scope.sheet || sheetFactory.create();
     $scope.nomeCaminho = $scope.sheet.caminho.info.nome;
 
