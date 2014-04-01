@@ -10,8 +10,8 @@ app.controller('SheetController', ['$scope','sheetFactory', 'Cla', 'Arquetipo','
         {name: "Incapacitado", modifier: '', value: 'incapacitado'},
     ];
 
-    $scope.sheet = $scope.sheet || sheetFactory.create();
-    $scope.nomeCaminho = $scope.sheet.caminho.info.nome;
+    //$scope.sheet; = $scope.sheet || sheetFactory.create();
+    //$scope.nomeCaminho = $scope.sheet.caminho.info.nome;
 
     $scope.clas = Cla.get();
     $scope.arquetipos = Arquetipo.get();
